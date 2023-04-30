@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract Calculator {
+contract Counter {
     uint private total;
     uint private subtracted;
     uint private multiplied;
