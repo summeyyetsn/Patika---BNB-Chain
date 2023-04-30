@@ -1,23 +1,17 @@
-const hre = require("hardhat");
-const fs = require('fs')
-
-async function main(){
-    const Counter = await hre.ethers.getContractFactory("Counter");
+async function main() {
+    const [deployer] = await ethers.getSigners();
+    console.log("Deploying contracts with the account:", deployer.address);
+    console.log("Account balance:", (await deployer.getBalance()).toString());
+    
+    const Counter = await ethers.getContractFactory("Counter");
     const counter = await Counter.deploy();
-    await counter.deployed();
-    console.log("Contract contract deployed to: ", counter.address);
-
-    let config = `module.exports ={
-        contractaddress : "${counter.address}"
+    
+    console.log("Counter address:", counter.address);
     }
-    `
-    let data = JSON.stringify(config)
-    fs.writeFileSync('config.js', JSON.parse(data))
-}
-
-main()
+    
+    main()
     .then(() => process.exit(0))
-    .catch((error)=>{
-        console.error(error);
-        process.exit(1);
+    .catch((error) => {
+    console.error(error);
+    process.exit(1);
     });

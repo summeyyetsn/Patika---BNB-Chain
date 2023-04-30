@@ -1,0 +1,3 @@
+Deploying contracts with the account: 0x0E58494C620Ed85A813F60a2bBfa1268dA090f95
+Account balance: 100000000000000000
+Counter address: 0x0f5f574659C8E9C24842DC83e77f421631e4f17C

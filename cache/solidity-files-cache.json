@@ -6,10 +6,10 @@
       "contentHash": "1d6efc5d0cd437069d857ec2367809aa",
       "sourceName": "contracts/Counter.sol",
       "solcConfig": {
-        "version": "0.8.18",
+        "version": "0.8.9",
         "settings": {
           "optimizer": {
-            "enabled": false,
+            "enabled": true,
             "runs": 200
           },
           "outputSelection": {
